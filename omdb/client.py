@@ -1,3 +1,11 @@
+import logging
+import requests
+
+from omdb import OMDB_API_URL
+
+logger = logging.getLogger(__name__)
+
+
 class OmdbMovie:
     """A simple class to represent movie data coming back from OMDb
     and transform to Python types."""
