@@ -45,6 +45,7 @@ class Dev(Configuration):
         'django.contrib.staticfiles',
         'movies',
         'gh',
+        'django_celery_results',
     ]
 
     MIDDLEWARE = [
@@ -161,3 +162,6 @@ class Dev(Configuration):
     SESSION_COOKIE_SAMESITE = "None"
 
     OMDB_KEY = "c0badf7a"
+
+    CELERY_RESULT_BACKEND = "django-db"
+    CELERY_BROKER_URL = "redis://localhost:6379/0"
